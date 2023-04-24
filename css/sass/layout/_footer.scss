@@ -1,0 +1,115 @@
+.footer {
+  background-color: #9c9c9c5c;
+  .content {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    .section-title {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      .imgs-box {
+        .image {
+          display: flex;
+          margin-bottom: 25px;
+          @media #{$maxMobile} {
+            flex-direction: column;
+            align-items: center;
+          }
+          img {
+            max-width: 100%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border: 4px solid $textColor;
+          }
+          .text {
+            h4 {
+              color: $mainColor;
+              margin-bottom: 15px;
+            }
+            p {
+              color: #555;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      ul {
+        margin-bottom: 20px;
+        li {
+          margin-bottom: 10px;
+          a {
+            color: #555;
+            transition: $transition;
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+      }
+      .email {
+        margin-bottom: 20px;
+        p {
+          color: #555;
+          margin-bottom: 10px;
+          span {
+            color: $mainColor;
+          }
+        }
+      }
+      .working {
+        color: #555;
+        margin-bottom: 10px;
+      }
+        p {
+          color: #555;
+          margin-bottom: 10px;
+        }
+    }
+    .contact {
+      form {
+        display: flex;
+        flex-direction: column;
+        input {
+          padding: 5px 4px;
+          height: 20px;
+          border-radius: 6px;
+          height: 30px;
+          margin-bottom: 20px;
+          border: none;
+          outline: none;
+        }
+        textarea {
+          padding: 5px 4px;
+          border: none; 
+          outline: none;
+          border-radius: 6px;
+          height: 100px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-top: 1px solid #c5c5c5;
+    color: #555;
+    @media #{$maxMobile} {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  @media #{$maxMobile} {
+    text-align: center;
+  }
+}

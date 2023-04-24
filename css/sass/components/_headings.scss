@@ -1,0 +1,23 @@
+.head-with-border {
+  position: relative;
+  h2 {
+    background-color: $mainColor;
+    text-align: center;
+    color: $white;
+    margin: 40px auto;
+    border-radius: 15px;
+    width: 400px;
+    padding: 10px 15px;
+    transition: $transition;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1.5px;
+      background-color: $textColor;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+    }
+  }
+}

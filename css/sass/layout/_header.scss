@@ -1,0 +1,70 @@
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid $textColor;
+  .content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  } 
+  .logo {
+    float: $float-left;
+    h1 {
+      margin: 0 0 10px 0 ;
+    }
+    p {
+      color: $textColor;
+      text-align: center;
+    }
+  }
+  .navbar {
+    display: flex;
+    text-align: center;
+    float: $float-left;
+    background-color: $mainColor;
+    border-radius: 15px;
+    @media #{$maxSmall} {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 87px;
+    }
+    a {
+      display: block;
+      padding: 25px 35px;
+      color: $white;
+      transition: $transition;
+      text-align: left;
+      &:hover {
+        color: #ddd;
+      }
+    }
+    .close {
+      color: $mainColor;
+      background-color: $white;
+      border-radius: 50%;
+      font-weight: bold;
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      padding: 6px;
+      cursor: pointer;
+      @media #{$minMedium} {
+        display: none;
+      }
+    }
+  }
+  .toggle {
+    font-size: 30px;
+    cursor: pointer;
+    color: $mainColor;
+    @media #{$minMedium} {
+      display: none;
+    }
+  }
+}
+.navbar.open {
+  display: block;
+}
